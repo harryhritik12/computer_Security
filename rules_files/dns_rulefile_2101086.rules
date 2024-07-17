@@ -1,0 +1,2 @@
+# Alert on any DNS traffic to the local DNS server that contains the keyword "ubuntu".
+alert udp any any -> $HOME_NET 53 ( msg:"DNS Query Ubuntu."; content:"ubuntu" ,fast_pattern; sid:1000006; )

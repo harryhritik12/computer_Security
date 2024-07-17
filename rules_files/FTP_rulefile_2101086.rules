@@ -1,0 +1,2 @@
+# Alert on any FTP traffic with the SYN flag set to the server.
+alert tcp any any -> $HOME_NET 21 ( msg:"Attempt to FTP to server."; flags:S; sid:1000001; )

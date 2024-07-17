@@ -1,0 +1,196 @@
+--------------------------------------------------
+o")~   Snort++ 3.1.84.0
+--------------------------------------------------
+Loading /opt/home/etc/snort/snort.lua:
+Loading snort_defaults.lua:
+Finished snort_defaults.lua:
+	modbus
+	s7commplus
+	dce_tcp
+	dce_http_proxy
+	gtp_inspect
+	port_scan
+	smtp
+	ftp_server
+	ftp_client
+	http_inspect
+	file_policy
+	js_norm
+	wizard
+	binder
+	references
+	classifications
+	ips
+	http2_inspect
+	ftp_data
+	dce_http_server
+	dce_udp
+	dce_smb
+	mms
+	dnp3
+	telnet
+	ssh
+	rpc_decode
+	trace
+	normalizer
+	imap
+	dns
+	back_orifice
+	arp_spoof
+	stream_file
+	active
+	daq
+	host_cache
+	stream_ip
+	output
+	file_id
+	alerts
+	decode
+	host_tracker
+	hosts
+	network
+	packets
+	process
+	search_engine
+	so_proxy
+	stream
+	stream_icmp
+	stream_tcp
+	stream_udp
+	stream_user
+	netflow
+	pop
+	sip
+	ssl
+	cip
+	iec104
+Finished /opt/home/etc/snort/snort.lua:
+Loading file_id.rules_file:
+Loading file_magic.rules:
+Finished file_magic.rules:
+Finished file_id.rules_file:
+Loading /opt/home/etc/snort/rules/http_rulefile_2101086.rules:
+Finished /opt/home/etc/snort/rules/http_rulefile_2101086.rules:
+--------------------------------------------------
+ips policies rule stats
+              id  loaded  shared enabled    file
+               0     209       0     209    /opt/home/etc/snort/snort.lua
+--------------------------------------------------
+rule counts
+       total rules loaded: 209
+               text rules: 209
+            option chains: 209
+            chain headers: 2
+--------------------------------------------------
+port rule counts
+             tcp     udp    icmp      ip
+     dst       1       0       0       0
+   total       1       0       0       0
+--------------------------------------------------
+service rule counts          to-srv  to-cli
+                  file_id:      208     208
+                    total:      208     208
+--------------------------------------------------
+fast pattern groups
+                to_server: 1
+                to_client: 1
+--------------------------------------------------
+search engine (ac_bnfa)
+                instances: 2
+                 patterns: 416
+            pattern chars: 2508
+               num states: 1778
+         num match states: 370
+             memory scale: KB
+             total memory: 68.5879
+           pattern memory: 18.6973
+        match list memory: 27.3281
+        transition memory: 22.3125
+--------------------------------------------------
+pcap DAQ configured to read-file.
+Commencing packet processing
+++ [0] /Users/hritik/Desktop/college_work/6th_sem/Computer_security/Assignment2_snort/all_traffic.pcap
+04/15-02:06:05.205716 [**] [1:1000005:0] "Attempt to http to server." [**] [Priority: 0] {TCP} 10.0.0.1:80 -> 192.168.1.1:80
+-- [0] /Users/hritik/Desktop/college_work/6th_sem/Computer_security/Assignment2_snort/all_traffic.pcap
+--------------------------------------------------
+Packet Statistics
+--------------------------------------------------
+daq
+                    pcaps: 1
+                 received: 8
+                 analyzed: 8
+                    allow: 8
+                 rx_bytes: 529
+--------------------------------------------------
+codec
+                    total: 8           	(100.000%)
+                    icmp4: 1           	( 12.500%)
+                     ipv4: 8           	(100.000%)
+                      tcp: 6           	( 75.000%)
+                      udp: 1           	( 12.500%)
+--------------------------------------------------
+Module Statistics
+--------------------------------------------------
+back_orifice
+                  packets: 1
+--------------------------------------------------
+binder
+              raw_packets: 3
+                new_flows: 4
+                 inspects: 7
+--------------------------------------------------
+detection
+                 analyzed: 8
+               hard_evals: 2
+                   alerts: 1
+             total_alerts: 1
+                   logged: 1
+--------------------------------------------------
+dns
+                  packets: 1
+                 requests: 1
+--------------------------------------------------
+normalizer
+           test_tcp_block: 2
+--------------------------------------------------
+port_scan
+                  packets: 8
+                 trackers: 8
+--------------------------------------------------
+search_engine
+     non_qualified_events: 1
+         qualified_events: 1
+--------------------------------------------------
+stream
+                    flows: 4
+--------------------------------------------------
+stream_icmp
+                 sessions: 1
+                      max: 1
+                  created: 1
+                 released: 1
+--------------------------------------------------
+stream_tcp
+                 sessions: 2
+                      max: 2
+                  created: 2
+             instantiated: 2
+                   setups: 2
+         discards_skipped: 2
+             no_flags_set: 2
+                     fins: 1
+--------------------------------------------------
+stream_udp
+                 sessions: 1
+                      max: 1
+                  created: 1
+                 released: 1
+              total_bytes: 28
+--------------------------------------------------
+Summary Statistics
+--------------------------------------------------
+timing
+                  runtime: 00:00:00
+                  seconds: 0.025277
+                 pkts/sec: 316
+o")~   Snort exiting

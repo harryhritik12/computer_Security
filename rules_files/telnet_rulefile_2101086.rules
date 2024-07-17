@@ -1,0 +1,2 @@
+# Alert on any telnet traffic with the SYN flag set to the server.
+alert tcp any any -> $HOME_NET 23 ( msg:"Attempt to telnet to server."; flags:S; sid:1000003; )

@@ -1,0 +1,2 @@
+# Alert on any incoming pings to the server.
+alert icmp any any -> $HOME_NET any ( msg:"Attempt to ping the server."; itype:8; sid:1000002; )

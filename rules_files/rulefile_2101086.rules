@@ -1,0 +1,23 @@
+# Alert on any FTP traffic with the SYN flag set to the server.
+alert tcp any any -> $HOME_NET 21 ( msg:"Attempt to FTP to server."; flags:S; sid:1000001; )
+
+
+# Alert on any incoming pings to the server.
+alert icmp any any -> $HOME_NET any ( msg:"Attempt to ping the server."; itype:8; sid:1000002; )
+# Alert on any telnet traffic with the SYN flag set to the server.
+alert tcp any any -> $HOME_NET 23 ( msg:"Attempt to telnet to server."; flags:S; sid:1000003; )
+
+# Alert on any SSH traffic containing keyword "SSH-2" to the server.
+alert tcp any any -> $HOME_NET 22 ( msg:"Attempt to SSH to server."; content:"SSH-2", fast_pattern; sid:1000004; )
+
+# Alert on any HTTP traffic with the SYN flag set to the server.
+alert tcp any any -> $HOME_NET 80 ( msg:"Attempt to http to server."; flags:S; sid:1000005; )
+
+# Alert on any DNS traffic to the local DNS server that contains the keyword "ubuntu".
+alert udp any any -> $HOME_NET 53 ( msg:"DNS Query Ubuntu."; content:"ubuntu",fast_pattern ; sid:1000006; )
+
+# Alert on any packet to the server that contains the text "secret.txt".
+alert ip any any -> $HOME_NET any ( msg:"Found secret.txt."; content:"secret.txt", fast_pattern; sid:1000007; )
+
+# Alert on any SSH traffic to the server with the FIN and ACK flags set.
+alert tcp any any -> $HOME_NET 22 ( msg:"F/A for SSH teardown."; flags:FA; sid:1000008; )
